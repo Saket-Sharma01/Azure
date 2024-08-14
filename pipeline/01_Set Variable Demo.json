@@ -61,6 +61,11 @@
 				}
 			}
 		],
+		"parameters": {
+			"Set": {
+				"type": "string"
+			}
+		},
 		"variables": {
 			"length": {
 				"type": "String"
