@@ -13,6 +13,17 @@
 				"userProperties": []
 			}
 		],
+		"variables": {
+			"length": {
+				"type": "String"
+			},
+			"breadth": {
+				"type": "String"
+			},
+			"area": {
+				"type": "String"
+			}
+		},
 		"folder": {
 			"name": "Pipeline Activities/Data Movement Activities/Set Variable"
 		},
