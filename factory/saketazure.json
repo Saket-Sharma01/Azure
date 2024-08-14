@@ -1,0 +1,9 @@
+{
+	"name": "saketazure",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "03c48079-89fd-42e0-90d9-df81bdfbd1c4",
+		"tenantId": "30d8e81a-72e0-40ae-843f-5830e5909d05"
+	}
+}
