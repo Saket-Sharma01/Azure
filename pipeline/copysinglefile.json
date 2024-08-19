@@ -1,0 +1,9 @@
+{
+	"name": "copysinglefile",
+	"properties": {
+		"folder": {
+			"name": "Pipeline Activities"
+		},
+		"annotations": []
+	}
+}
