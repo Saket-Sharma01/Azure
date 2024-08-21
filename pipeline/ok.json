@@ -1,0 +1,29 @@
+{
+	"name": "ok",
+	"properties": {
+		"variables": {
+			"filenames": {
+				"type": "Array"
+			},
+			"filename": {
+				"type": "Array"
+			},
+			"allfilenames": {
+				"type": "Array"
+			},
+			"allfilename": {
+				"type": "Array"
+			},
+			"filedetails": {
+				"type": "Array"
+			},
+			"filealldetails": {
+				"type": "Array"
+			}
+		},
+		"folder": {
+			"name": "Pipeline Activities"
+		},
+		"annotations": []
+	}
+}

@@ -1,5 +1,5 @@
 {
-	"name": "lookup1",
+	"name": "lookup_nameemail",
 	"properties": {
 		"activities": [
 			{
@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select name,email from dbo.users",
+						"sqlReaderQuery": "select name, email from dbo.users",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -52,9 +52,9 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "allfilename",
+								"variableName": "filealldetails",
 								"value": {
-									"value": "@item().name",
+									"value": "@concat(item().name,'-', item().email)\n ",
 									"type": "Expression"
 								}
 							}
@@ -79,21 +79,23 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "allfilename",
+					"variableName": "filedetails",
 					"value": {
-						"value": "@variables('filename')",
+						"value": "@variables('filealldetails')",
 						"type": "Expression"
 					}
 				}
 			}
 		],
+		"parameters": {
+			"filedetails": {
+				"type": "array"
+			},
+			"alldetails": {
+				"type": "array"
+			}
+		},
 		"variables": {
-			"filename": {
-				"type": "Array"
-			},
-			"allfilename": {
-				"type": "Array"
-			},
 			"filedetails": {
 				"type": "Array"
 			},

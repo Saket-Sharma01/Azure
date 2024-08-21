@@ -1,0 +1,14 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"variables": {
+			"filedetails": {
+				"type": "Array"
+			},
+			"filealldetails": {
+				"type": "Array"
+			}
+		},
+		"annotations": []
+	}
+}

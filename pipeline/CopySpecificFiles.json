@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "CopySpecificFiles",
 	"properties": {
 		"activities": [
 			{
@@ -55,6 +55,26 @@
 				]
 			}
 		],
+		"variables": {
+			"filenames": {
+				"type": "Array"
+			},
+			"filename": {
+				"type": "Array"
+			},
+			"allfilenames": {
+				"type": "Array"
+			},
+			"allfilename": {
+				"type": "Array"
+			},
+			"filedetails": {
+				"type": "Array"
+			},
+			"filealldetails": {
+				"type": "Array"
+			}
+		},
 		"folder": {
 			"name": "Pipeline Activities"
 		},

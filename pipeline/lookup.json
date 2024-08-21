@@ -17,17 +17,101 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "select * from dbo.users where country = 'India'",
+						"sqlReaderQuery": "select top 5 * from dbo.users where country = 'India'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
 						"referenceName": "DS_AzureSQL_retail_db_customers",
 						"type": "DatasetReference"
+					},
+					"firstRowOnly": false
+				}
+			},
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [
+					{
+						"name": "filename",
+						"value": "array"
+					}
+				],
+				"typeProperties": {
+					"items": {
+						"value": "@activity('Lookup1').output.value",
+						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "Append variable1",
+							"type": "AppendVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "allfilename",
+								"value": {
+									"value": "@item().name",
+									"type": "Expression"
+								}
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "allfilenames",
+					"value": {
+						"value": "@variables('filename')",
+						"type": "Expression"
 					}
 				}
 			}
 		],
+		"variables": {
+			"filenames": {
+				"type": "Array"
+			},
+			"filename": {
+				"type": "Array"
+			},
+			"allfilenames": {
+				"type": "Array"
+			},
+			"allfilename": {
+				"type": "Array"
+			},
+			"filedetails": {
+				"type": "Array"
+			},
+			"filealldetails": {
+				"type": "Array"
+			}
+		},
 		"folder": {
 			"name": "Pipeline Activities"
 		},

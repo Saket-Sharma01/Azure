@@ -1,5 +1,5 @@
 {
-	"name": "01_Set Variable Demo",
+	"name": "Length_Breadth_Area",
 	"properties": {
 		"activities": [
 			{
@@ -75,6 +75,24 @@
 			},
 			"area": {
 				"type": "String"
+			},
+			"filenames": {
+				"type": "Array"
+			},
+			"filename": {
+				"type": "Array"
+			},
+			"allfilenames": {
+				"type": "Array"
+			},
+			"allfilename": {
+				"type": "Array"
+			},
+			"filedetails": {
+				"type": "Array"
+			},
+			"filealldetails": {
+				"type": "Array"
 			}
 		},
 		"folder": {
