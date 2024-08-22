@@ -1,0 +1,31 @@
+{
+	"name": "DS_azurestorageacctraining_PARAMETERIZED",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_AzureDataLakeStorage_azurestorageacctraining",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"fileNameDS": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().fileNameDS",
+					"type": "Expression"
+				},
+				"fileSystem": "retaildb"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
