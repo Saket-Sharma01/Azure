@@ -47,10 +47,116 @@
 					"items": {
 						"value": "@activity('Get Metadata1').output.childItems",
 						"type": "Expression"
+					},
+					"activities": [
+						{
+							"name": "If Condition1",
+							"type": "IfCondition",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"expression": {
+									"value": "@contains(item().name,'.csv')\r\n ",
+									"type": "Expression"
+								},
+								"ifFalseActivities": [
+									{
+										"name": "Setting to OtherFileNames",
+										"type": "AppendVariable",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "OtherFileNames",
+											"value": {
+												"value": "@item().name",
+												"type": "Expression"
+											}
+										}
+									}
+								],
+								"ifTrueActivities": [
+									{
+										"name": "Appending to CSVFileNames",
+										"type": "AppendVariable",
+										"dependsOn": [],
+										"userProperties": [],
+										"typeProperties": {
+											"variableName": "CSVFileNames",
+											"value": {
+												"value": "@item().name",
+												"type": "Expression"
+											}
+										}
+									}
+								]
+							}
+						}
+					]
+				}
+			},
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "AllCSVFileNames",
+					"value": {
+						"value": "@variables('CSVFileNames')",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Set variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "AllOtherFileNames",
+					"value": {
+						"value": "@variables('OtherFileNames')",
+						"type": "Expression"
 					}
 				}
 			}
 		],
+		"variables": {
+			"CSVFileNames": {
+				"type": "Array"
+			},
+			"OtherFileNames": {
+				"type": "Array"
+			},
+			"AllCSVFileNames": {
+				"type": "Array"
+			},
+			"AllOtherFileNames": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
