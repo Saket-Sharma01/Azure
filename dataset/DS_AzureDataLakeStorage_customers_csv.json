@@ -5,6 +5,9 @@
 			"referenceName": "LS_AzureDataLakeStorage_azurestorageacctraining",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "ADLS Datasets"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

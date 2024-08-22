@@ -5,6 +5,9 @@
 			"referenceName": "LS_AzureDataLakeStorage_azurestorageacctraining",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Data Movement Datasets"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
