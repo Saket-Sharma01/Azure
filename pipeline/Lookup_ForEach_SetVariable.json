@@ -1,5 +1,5 @@
 {
-	"name": "lookup",
+	"name": "Lookup_ForEach_SetVariable",
 	"properties": {
 		"activities": [
 			{
@@ -109,6 +109,12 @@
 				"type": "Array"
 			},
 			"filealldetails": {
+				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
 				"type": "Array"
 			}
 		},

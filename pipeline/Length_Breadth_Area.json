@@ -93,10 +93,16 @@
 			},
 			"filealldetails": {
 				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
+				"type": "Array"
 			}
 		},
 		"folder": {
-			"name": "Pipeline Activities/Data Movement Activities/Set Variable"
+			"name": "Pipeline Activities"
 		},
 		"annotations": []
 	}

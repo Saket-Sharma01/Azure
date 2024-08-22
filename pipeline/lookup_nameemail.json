@@ -101,7 +101,16 @@
 			},
 			"filealldetails": {
 				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
+				"type": "Array"
 			}
+		},
+		"folder": {
+			"name": "Pipeline Activities"
 		},
 		"annotations": []
 	}

@@ -157,6 +157,9 @@
 				"type": "Array"
 			}
 		},
+		"folder": {
+			"name": "Pipeline Activities"
+		},
 		"annotations": []
 	}
 }

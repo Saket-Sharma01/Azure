@@ -1,5 +1,5 @@
 {
-	"name": "CopyAllfiles",
+	"name": "Copy_All_Files",
 	"properties": {
 		"activities": [
 			{
@@ -73,6 +73,12 @@
 				"type": "Array"
 			},
 			"filealldetails": {
+				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
 				"type": "Array"
 			}
 		},

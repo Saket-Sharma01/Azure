@@ -1,6 +1,32 @@
 {
-	"name": "copysinglefile",
+	"name": "Copy_Single_File",
 	"properties": {
+		"variables": {
+			"filenames": {
+				"type": "Array"
+			},
+			"filename": {
+				"type": "Array"
+			},
+			"allfilenames": {
+				"type": "Array"
+			},
+			"allfilename": {
+				"type": "Array"
+			},
+			"filedetails": {
+				"type": "Array"
+			},
+			"filealldetails": {
+				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
+				"type": "Array"
+			}
+		},
 		"folder": {
 			"name": "Pipeline Activities"
 		},

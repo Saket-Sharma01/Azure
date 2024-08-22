@@ -1,5 +1,5 @@
 {
-	"name": "metadata",
+	"name": "Get_Metadata",
 	"properties": {
 		"activities": [
 			{
@@ -49,6 +49,12 @@
 				"type": "Array"
 			},
 			"filealldetails": {
+				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
 				"type": "Array"
 			}
 		},

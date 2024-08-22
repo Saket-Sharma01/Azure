@@ -1,5 +1,5 @@
 {
-	"name": "CopySpecificFiles",
+	"name": "Copy_Specific_Files",
 	"properties": {
 		"activities": [
 			{
@@ -72,6 +72,12 @@
 				"type": "Array"
 			},
 			"filealldetails": {
+				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
 				"type": "Array"
 			}
 		},

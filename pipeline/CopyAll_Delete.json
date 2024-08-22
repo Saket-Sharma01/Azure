@@ -1,5 +1,5 @@
 {
-	"name": "Delete",
+	"name": "CopyAll_Delete",
 	"properties": {
 		"activities": [
 			{
@@ -113,6 +113,12 @@
 				"type": "Array"
 			},
 			"filealldetails": {
+				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
 				"type": "Array"
 			}
 		},

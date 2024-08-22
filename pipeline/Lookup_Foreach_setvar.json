@@ -1,5 +1,5 @@
 {
-	"name": "lookup1",
+	"name": "Lookup_Foreach_setvar",
 	"properties": {
 		"activities": [
 			{
@@ -99,7 +99,16 @@
 			},
 			"filealldetails": {
 				"type": "Array"
+			},
+			"CSVFileNames  ": {
+				"type": "Array"
+			},
+			"PDFFileNames  ": {
+				"type": "Array"
 			}
+		},
+		"folder": {
+			"name": "Pipeline Activities"
 		},
 		"annotations": []
 	}

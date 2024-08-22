@@ -1,5 +1,5 @@
 {
-	"name": "getmeta",
+	"name": "GetMetadata_ForEach_SetVar",
 	"properties": {
 		"activities": [
 			{
@@ -140,6 +140,9 @@
 			"FinalOutput": {
 				"type": "Array"
 			}
+		},
+		"folder": {
+			"name": "Pipeline Activities"
 		},
 		"annotations": []
 	}
