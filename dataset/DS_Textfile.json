@@ -1,12 +1,9 @@
 {
-	"name": "DS_AzureDataLakeStorage_customers_csv",
+	"name": "DS_Textfile",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_AzureDataLakeStorage_azurestorageacctraining",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "ADLS Datasets"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
@@ -27,15 +24,7 @@
 				"type": "String"
 			},
 			{
-				"name": "name",
-				"type": "String"
-			},
-			{
-				"name": "dob",
-				"type": "String"
-			},
-			{
-				"name": "email",
+				"name": "age",
 				"type": "String"
 			},
 			{
@@ -43,23 +32,11 @@
 				"type": "String"
 			},
 			{
-				"name": "country",
+				"name": "designation",
 				"type": "String"
 			},
 			{
-				"name": "region",
-				"type": "String"
-			},
-			{
-				"name": "city",
-				"type": "String"
-			},
-			{
-				"name": "asset",
-				"type": "String"
-			},
-			{
-				"name": "marital_status",
+				"name": "salary",
 				"type": "String"
 			}
 		]

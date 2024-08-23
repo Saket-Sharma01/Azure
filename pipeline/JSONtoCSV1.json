@@ -1,5 +1,5 @@
 {
-	"name": "Copy to Azure SQL",
+	"name": "JSONtoCSV1",
 	"properties": {
 		"activities": [
 			{
@@ -27,9 +27,15 @@
 						}
 					},
 					"sink": {
-						"type": "AzureSqlSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
 					},
 					"enableStaging": false
 				},
@@ -41,7 +47,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_AzureSQL_retail_db_customers",
+						"referenceName": "DS_ADLS_CopyAllFiles_azurestorageacctraining_retaildb_customerscsv",
 						"type": "DatasetReference"
 					}
 				]
