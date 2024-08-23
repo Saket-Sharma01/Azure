@@ -1,5 +1,5 @@
 {
-	"name": "Execute pipelone 1 to pipeline 2",
+	"name": "Execute pipeline 1 to pipeline 2",
 	"properties": {
 		"activities": [
 			{
@@ -11,6 +11,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "JSONtoCSV1",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
@@ -30,6 +34,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Copy to Azure SQL",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}

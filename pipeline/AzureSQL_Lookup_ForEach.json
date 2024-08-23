@@ -1,5 +1,5 @@
 {
-	"name": "Task 4",
+	"name": "AzureSQL_Lookup_ForEach",
 	"properties": {
 		"activities": [
 			{
@@ -132,6 +132,9 @@
 				}
 			}
 		],
+		"folder": {
+			"name": "Execute Pipeline"
+		},
 		"annotations": []
 	}
 }
