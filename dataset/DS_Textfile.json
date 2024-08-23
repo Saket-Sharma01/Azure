@@ -5,6 +5,9 @@
 			"referenceName": "LS_AzureDataLakeStorage_azurestorageacctraining",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "JSON Dataset"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
